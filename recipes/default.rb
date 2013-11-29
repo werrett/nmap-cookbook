@@ -14,7 +14,7 @@ package 'libpcre3-dev'
 package 'libssl-dev'
 package 'libstdc++6'
 
-src_filepath  = "#{Chef::Config['file_cache_path'] || '/tmp'}/nmap-#{node['nmap'][version]}.tgz"
+src_filepath  = "#{Chef::Config['file_cache_path'] || '/tmp'}/nmap-#{node['nmap']['version']}.tgz"
 
 nmap_url = node['nmap']['url'] ||
   "http://nmap.org/dist/nmap-#{node['nmap']['version']}.tgz"
@@ -44,5 +44,5 @@ bash "install_nmap" do
   EOH
   
   action :nothing
-  not_if "#{default['nmap']['binary']} --version | grep -q 'Nmap version #{node['nmap']['version']}'"
+  not_if "#{node['nmap']['binary']} --version | grep -q 'Nmap version #{node['nmap']['version']}'"
 end
