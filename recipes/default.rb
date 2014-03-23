@@ -2,7 +2,7 @@
 # Cookbook Name:: nmap
 # Recipe:: default
 #
-# Copyright (C) 2013 Jonathan Werrett
+# Copyright (C) 2014 Jonathan Werrett
 #
 
 package 'build-essential'
