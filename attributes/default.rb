@@ -5,7 +5,7 @@
 # Copyright (C) 2014 Jonathan Werrett
 
 
-default['nmap']['version'] = '6.40'
+default['nmap']['version'] = '6.47'
 default['nmap']['binary'] = '/usr/local/bin/nmap'
 
 
